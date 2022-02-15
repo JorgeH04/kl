@@ -1,11 +1,11 @@
 'use strict';
 
-// require('dotenv-safe').load({
-//   allowEmptyValues: true
-// });
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}          
+require('dotenv-safe').config({
+  allowEmptyValues: true
+});
+// if (process.env.NODE_ENV !== 'production') {
+//   require('dotenv').config();
+// }          
 require('serve-favicon');
 const express = require('express');
 const path = require('path');
