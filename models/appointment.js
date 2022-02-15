@@ -15,7 +15,7 @@ const AppointmentSchema = new mongoose.Schema({
   timeZone: String,
   time: {type: Date, index: true},
 });
-
+ 
 AppointmentSchema.methods.requiresNotification = function(date) {
   return Math.round(moment.duration(moment(this.time).tz(this.timeZone).utc()
                           .diff(moment(date).utc())
@@ -40,16 +40,13 @@ AppointmentSchema.statics.sendNotifications = function(callback) {
     * Send messages to all appoinment owners via Twilio
     * @param {array} appointments List of appointments.
     */
-    async function sendNotifications(appointments) {
-      //const client = new Twilio(cfg.twilioAccountSid, cfg.twilioAuthToken);
-       const client = new Twilio(accountSid, authToken);
+    
+     function sendNotifications(appointments) {
+
+      const client = new Twilio(accountSid, authToken);
 
 
- 
-
-
-
-
+       
         appointments.forEach(async function(appointment) {
 
 
@@ -67,11 +64,7 @@ AppointmentSchema.statics.sendNotifications = function(callback) {
              
              console.log(response);
 
-            
-         
-
-
-            
+             
         });
 
        

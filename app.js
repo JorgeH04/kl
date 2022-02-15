@@ -56,3 +56,10 @@ scheduler.start();
 
  
 module.exports = app;
+
+// TWILIO_ACCOUNT_SID=AC3159436f8bb88f83f66a22fac8f71003
+// TWILIO_AUTH_TOKEN=f425369b56c1665cca2efad0d9d128a2
+// TWILIO_PHONE_NUMBER=+18456689535
+// MONGODB_URI=mongodb://127.0.0.1:27017/appointment-reminders
+// MONGO_URL_TEST=mongodb://127.0.0.1:27017/appointment-reminders
+// NODE_ENV=production

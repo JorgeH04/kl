@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 
 const appointments = require('./routes/appointments');
 const scheduler = require('./scheduler');
-
+  
 const app = express();
 require('./database');
       
