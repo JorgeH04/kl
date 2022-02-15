@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 const moment = require('moment');
 const cfg = require('../config');
 const Twilio = require('twilio');
-const accountSid = 'ACb5384ea5b470b867a2fddf5edd40c795'
-const authToken = '41a0390540664a4ef0fe30a7189926a6' 
+ 
+  
+const accountSid = 'AC7921e66dffe635d9c91d97dfbe2c136c'  
+const authToken = 'f50f363fb9eb798acfb8c13ce88cc2e6'  
 const client = require('twilio')(accountSid, authToken); 
 
 const AppointmentSchema = new mongoose.Schema({
