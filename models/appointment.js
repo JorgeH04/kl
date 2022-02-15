@@ -5,9 +5,11 @@ const moment = require('moment');
 const cfg = require('../config');
 const Twilio = require('twilio');
  
-  
-const accountSid = 'AC7921e66dffe635d9c91d97dfbe2c136c'  
-const authToken = 'f50f363fb9eb798acfb8c13ce88cc2e6'  
+const accountSid = process.env.TWILIO_ACCOUNT_SID 
+const authToken = process.env.TWILIO_AUTH_TOKEN  
+ 
+// const accountSid = 'AC7921e66dffe635d9c91d97dfbe2c136c'  
+// const authToken = 'f50f363fb9eb798acfb8c13ce88cc2e6'  
 const client = require('twilio')(accountSid, authToken); 
 
 const AppointmentSchema = new mongoose.Schema({
