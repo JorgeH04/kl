@@ -7,6 +7,7 @@ const Twilio = require('twilio');
  
 const accountSid = process.env.TWILIO_ACCOUNT_SID 
 const authToken = process.env.TWILIO_AUTH_TOKEN  
+const numbertwilio = process.env.TWILIO_PHONE_NUMBER  
  
 // const accountSid = 'AC7921e66dffe635d9c91d97dfbe2c136c'  
 // const authToken = 'f50f363fb9eb798acfb8c13ce88cc2e6'  
@@ -60,7 +61,7 @@ AppointmentSchema.statics.sendNotifications = function(callback) {
                  
                     `Hola ${appointment.name}. Te recordamos que tenés un turno el día ${appointment.time.toLocaleDateString()} a las ${appointment.time.toLocaleTimeString()} .`
                  ],
-               from: 'whatsapp:+14155238886',   
+               from: numbertwilio,   
               // to: `whatsapp:5491130952942`
                to: `whatsapp:549${appointment.phoneNumber}`
                 
