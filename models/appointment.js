@@ -61,7 +61,7 @@ AppointmentSchema.statics.sendNotifications = function(callback) {
                  
                     `Hola ${appointment.name}. Te recordamos que tenés un turno el día ${appointment.time.toLocaleDateString()} a las ${appointment.time.toLocaleTimeString()} .`
                  ],
-               from: `whatsapp:${numbertwilio}`,   
+               from: `whatsapp:+${numbertwilio}`,   
               // to: `whatsapp:5491130952942`
                to: `whatsapp:549${appointment.phoneNumber}`
                 
