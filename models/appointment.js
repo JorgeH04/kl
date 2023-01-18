@@ -18,6 +18,7 @@ const AppointmentSchema = new mongoose.Schema({
   phoneNumber: String,
   notification: Number,
   timeZone: String,
+ // time: String,
   time: {type: Date, index: true},
 });
  
@@ -79,6 +80,6 @@ AppointmentSchema.statics.sendNotifications = function(callback) {
     }
 };
 
-
+ 
 const Appointment = mongoose.model('appointment', AppointmentSchema);
 module.exports = Appointment;

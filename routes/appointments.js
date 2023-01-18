@@ -12,10 +12,10 @@ const getTimeZones = function() {
 };
 
 // GET: /appointments
-router.get('/', function(req, res, next) {
+router.get('/index', function(req, res, next) {
   Appointment.find()
     .then(function(appointments) {
-      res.render('appointments/index', {appointments: appointments});
+      res.render('index', {appointments: appointments});
     });
 });
 
@@ -36,8 +36,8 @@ router.post('/', function(req, res, next) {
   const phoneNumber = req.body.phoneNumber;
   const notification = req.body.notification;
   const timeZone = req.body.timeZone;
-  const time = moment(req.body.time, 'MM-DD-YYYY hh:mma');
-
+//  const time = moment(req.body.time, 'MM-DD-YYYY hh:mma');
+ const time = req.body.time;
   const appointment = new Appointment({name: name,
                                        phoneNumber: phoneNumber,
                                        notification: notification,
@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
                                        time: time});
   appointment.save()
     .then(function() {
-      res.redirect('/');
+      res.redirect('/index');
     });
 });
 

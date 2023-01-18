@@ -16,8 +16,6 @@
     "sms",
     "notification"
   ],
- 
-   
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -28,6 +26,7 @@
     "debug": "^4.3.3",
     "dotenv": "^16.0.0",
     "dotenv-safe": "^8.2.0",
+    "ejs-mate": "^3.0.0",
     "eslint": "^8.9.0",
     "express": "^4.17.2",
     "moment": "^2.29.1",
